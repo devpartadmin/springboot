@@ -10,6 +10,7 @@ public interface UserService {
     //登陆
     Boolean login(String userName, String userPassword);
 
+    //校验用户名
     Boolean checkName(String userName);
 
 }

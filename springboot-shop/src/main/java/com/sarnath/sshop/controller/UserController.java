@@ -8,10 +8,7 @@ import com.sarnath.sshop.utils.ResultVOUtil;
 import com.sarnath.sshop.utils.UserForm2Entity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -20,6 +17,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/buyer")
+@CrossOrigin
 public class UserController {
 
     @Autowired
@@ -39,11 +37,12 @@ public class UserController {
         Map<String, String> map = new HashMap<>();
         if (!StringUtils.isEmpty(userName) && !StringUtils.isEmpty(userPassword)){
             if (userService.login(userName, userPassword)) {
-//                request.getSession().setAttribute("loginUser", openid);
+//                request.getSession().setAttribute("loginUser", userName);
                 map.put("userName", userName);
+                return ResultVOUtil.success(map);
             }
         }
-        return ResultVOUtil.success(map);
+        return ResultVOUtil.error(1001, "用户名不存在，或密码错误");
     }
 
     @PostMapping("/registCheck")
@@ -53,7 +52,7 @@ public class UserController {
             map.put("userName", userName);
             return ResultVOUtil.success(map);
         }
-        return ResultVOUtil.error(map);
+        return ResultVOUtil.error(1002, "用户名已存在");
     }
 
 }
