@@ -28,7 +28,7 @@ public class UserController {
         User user = UserForm2Entity.convert(userForm);
         userService.register(user);
         Map<String, Integer> map = new HashMap<String, Integer>();
-        map.put("SysAdminID", user.getUserId());
+        map.put("userId", user.getUserId());
         return ResultVOUtil.success(map);
     }
 
