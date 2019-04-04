@@ -28,10 +28,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean checkName(String userName) {
-        User user = userMapper.findUserByName(userName);
-        if (user == null) {
+        Integer userId = userMapper.findIdByName(userName);
+        if (userId == null) {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public Integer getUserId(String userName) {
+        return userMapper.findIdByName(userName);
     }
 }

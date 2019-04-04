@@ -10,4 +10,7 @@ public interface UserMapper {
     //查询用户
     User findUserByName(String userName);
 
+    //查询用户ID
+    Integer findIdByName(String userName);
+
 }
