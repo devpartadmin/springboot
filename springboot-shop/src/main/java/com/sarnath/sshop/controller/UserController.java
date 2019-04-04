@@ -8,6 +8,7 @@ import com.sarnath.sshop.utils.ResultVOUtil;
 import com.sarnath.sshop.utils.UserForm2Entity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,7 +25,10 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public ResultVO<Map<String, Integer>> register(@Valid UserForm userForm) {
+    public ResultVO<Map<String, Integer>> register(@Valid UserForm userForm, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return ResultVOUtil.error(1002, bindingResult.getFieldError().getDefaultMessage());
+        }
         User user = UserForm2Entity.convert(userForm);
         userService.register(user);
         Map<String, Integer> map = new HashMap<String, Integer>();
@@ -37,7 +41,7 @@ public class UserController {
         Map<String, String> map = new HashMap<>();
         if (!StringUtils.isEmpty(userName) && !StringUtils.isEmpty(userPassword)){
             if (userService.login(userName, userPassword)) {
-//                request.getSession().setAttribute("loginUser", userName);
+                request.getSession().setAttribute("loginUser", userName);
                 map.put("userName", userName);
                 return ResultVOUtil.success(map);
             }

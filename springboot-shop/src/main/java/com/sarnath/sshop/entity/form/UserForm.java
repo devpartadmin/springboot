@@ -1,13 +1,20 @@
 package com.sarnath.sshop.entity.form;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 public class UserForm {
+    @NotEmpty(message = "userName不能为空")
     private String userName;
+    @NotEmpty(message = "userEmail不能为空")
     private String userEmail;
     private Integer userSex;
     private Integer userPhone;
+    @NotEmpty(message = "userImg不能为空")
     private String userImg;
+    @NotEmpty(message = "userPassword不能为空")
     private String userPassword;
-    private Integer userVip;
 
     public String getUserName() {
         return userName;
@@ -57,11 +64,4 @@ public class UserForm {
         this.userPassword = userPassword;
     }
 
-    public Integer getUserVip() {
-        return userVip;
-    }
-
-    public void setUserVip(Integer userVip) {
-        this.userVip = userVip;
-    }
 }
