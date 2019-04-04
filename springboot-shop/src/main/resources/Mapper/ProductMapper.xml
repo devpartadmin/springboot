@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sarnath.sshop.mapper.ProductMapper">
+
+    <resultMap id="product" type="com.sarnath.sshop.entity.Product">
+        <id column="product_id" property="product_id"/>
+        <result column="product_price" property="product_price"/>
+        <result column="product_img" property="product_img"/>
+        <result column="product_num" property="product_num"/>
+        <result column="product_sale" property="product_sale"/>
+        <result column="product_name" property="product_name"/>
+        <result column="product_color" property="product_color"/>
+        <result column="product_common_detail" property="product_common_detail"/>
+        <result column="product_info" property="product_info"/>
+        <result column="creater" property="creater"/>
+        <result column="create_time" property="create_time"/>
+        <result column="updater" property="updater"/>
+        <result column="update_time" property="update_time"/>
+        <result column="is_delete" property="is_delete"/>
+        <collection property="product_attributes" ofType="com.sarnath.sshop.entity.Attribute">
+            <id column="attribute_id" property="attribute_id"/>
+            <result column="type_id" property="type_id"/>
+            <result column="relation_id" property="relation_id"/>
+            <result column="attribute_name" property="attr_name"/>
+            <association property="attr_content" resultMap="attribute_content"/>
+        </collection>
+    </resultMap>
+    <resultMap id="attribute_content" type="com.sarnath.sshop.entity.AttributeContent">
+        <id column="content_id" property="content_id"/>
+        <result column="kinds_id" property="kinds_id"/>
+        <result column="relation_id" property="relation_id"/>
+        <result column="content_name" property="content_name"/>
+    </resultMap>
+    <select id="getAllProducts" resultType="com.sarnath.sshop.entity.Product" resultMap="product">
+        SELECT * FROM (SELECT * FROM product p LEFT JOIN attribute a ON a.type_id=1) r LEFT JOIN attribute_content c
+        ON r.relation_id=c.relation_id AND c.kinds_id=r.product_id
+    </select>
+
+</mapper>
