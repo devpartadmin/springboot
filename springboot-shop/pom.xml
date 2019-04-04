@@ -14,6 +14,7 @@
 		<common.net.version>3.6</common.net.version>
 		<poi.version>3.17</poi.version>
 		<mybatis-spring-boot-starter-version>1.3.2</mybatis-spring-boot-starter-version>
+		<mybatis-generator.version>1.3.5</mybatis-generator.version>
 	</properties>
 
 	<parent>
@@ -105,6 +106,11 @@
 			<version>RELEASE</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.mybatis.generator</groupId>
+			<artifactId>mybatis-generator-maven-plugin</artifactId>
+			<version>${mybatis-generator.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -120,6 +126,17 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
 					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>${mybatis-generator.version}</version>
+				<configuration>
+					<!-- mybatis用于生成代码的配置文件 -->
+					<configurationFile>src\main\resources\generatorconfig.xml</configurationFile>
+					<verbose>true</verbose>
+					<overwrite>true</overwrite>
 				</configuration>
 			</plugin>
 		</plugins>
