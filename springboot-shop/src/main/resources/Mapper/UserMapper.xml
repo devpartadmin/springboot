@@ -4,11 +4,14 @@
 <mapper namespace="com.sarnath.sshop.mapper.UserMapper">
     <insert id="insert">
         INSERT INTO `sshop`.`user_table` (`user_name`, `user_email`, `user_sex`, `user_phone`, `last_login_time`, `user_img`, `user_creater`, `create_time`, `user_updater`, `update_time`, `user_is_delete`, `user_password`) VALUES (#{userName}, #{userEmail}, #{userSex}, #{userPhone}, #{lastLoginTime}, #{userImg}, #{userCreater}, #{createTime}, #{userUpdater}, #{updateTime}, #{userIsDelete}, #{userPassword});
-        <selectKey resultType="int" keyProperty="userId" order="AFTER">
+        <selectKey resultType="Integer" keyProperty="userId" order="AFTER">
             SELECT LAST_INSERT_ID()
         </selectKey>
     </insert>
     <select id="findUserByName" resultType="com.sarnath.sshop.entity.User">
-      SELECT * FROM user_table WHERE user_name = #{userName}
+        SELECT * FROM user_table WHERE user_name = #{userName}
+    </select>
+    <select id="findIdByName" resultType="Integer">
+        SELECT user_id FROM user_table WHERE user_name = #{userName}
     </select>
 </mapper>

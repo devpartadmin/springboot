@@ -13,4 +13,7 @@ public interface UserService {
     //校验用户名
     Boolean checkName(String userName);
 
+    //查询用户ID
+    Integer getUserId(String userName);
+
 }
