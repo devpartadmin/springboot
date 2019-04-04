@@ -16,7 +16,6 @@ public class User {
     private Date updateTime;
     private Integer userIsDelete;
     private String userPassword;
-    private Integer userVip;
 
     public Integer getUserId() {
         return userId;
@@ -122,11 +121,4 @@ public class User {
         this.userPassword = userPassword;
     }
 
-    public Integer getUserVip() {
-        return userVip;
-    }
-
-    public void setUserVip(Integer userVip) {
-        this.userVip = userVip;
-    }
 }
