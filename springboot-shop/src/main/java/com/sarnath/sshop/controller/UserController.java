@@ -18,7 +18,7 @@ import java.util.Map;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/buyer")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
