@@ -1,0 +1,4 @@
+2019-06-08 14:06:07:101[http-nio-8081-exec-3]WARN  org.springframework.web.servlet.PageNotFound-Request method 'POST' not supported
+2019-06-08 14:06:07:101[http-nio-8081-exec-3]WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver-Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+2019-06-08 14:06:19:362[http-nio-8081-exec-5]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: com.sarnath.sshop.exception.SellException: 参数错误
+2019-16-08 14:16:35:443[http-nio-8081-exec-2]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: com.sarnath.sshop.exception.SellException: 参数错误
