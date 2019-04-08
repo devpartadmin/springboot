@@ -8,7 +8,7 @@
             SELECT LAST_INSERT_ID()
         </selectKey>
     </insert>
-    <select id="findUserByName" resultType="com.sarnath.sshop.entity.UserEntity">
+    <select id="findUserByName" resultType="com.sarnath.sshop.entity.User">
         SELECT * FROM user_table WHERE user_name = #{userName}
     </select>
     <select id="findIdByName" resultType="Integer">

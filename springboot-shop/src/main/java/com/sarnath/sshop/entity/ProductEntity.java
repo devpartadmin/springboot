@@ -40,6 +40,7 @@ public class ProductEntity {
     private Integer product_num;
     private  Integer product_sale;
     private  String product_name;
+    private Integer product_color;
     private String product_common_detail;
     private String product_info;
     private String creater;
@@ -49,6 +50,23 @@ public class ProductEntity {
     private boolean is_delete;
     private ArrayList<AttributeEntity> product_attributes;
 
+    public ProductEntity(Integer product_id, Double product_price, String product_img, Integer product_num, Integer product_sale, String product_name, Integer product_color, String product_common_detail, String product_info, String creater, Date create_time, String updater, Date update_time, boolean is_delete, ArrayList<AttributeEntity> product_attributes) {
+        this.product_id = product_id;
+        this.product_price = product_price;
+        this.product_img = product_img;
+        this.product_num = product_num;
+        this.product_sale = product_sale;
+        this.product_name = product_name;
+        this.product_color = product_color;
+        this.product_common_detail = product_common_detail;
+        this.product_info = product_info;
+        this.creater = creater;
+        this.create_time = create_time;
+        this.updater = updater;
+        this.update_time = update_time;
+        this.is_delete = is_delete;
+        this.product_attributes = product_attributes;
+    }
 
     public ArrayList<AttributeEntity> getProduct_attributes() {
 
@@ -111,21 +129,12 @@ public class ProductEntity {
         this.product_name = product_name;
     }
 
-    public ProductEntity(Integer product_id, Double product_price, String product_img, Integer product_num, Integer product_sale, String product_name, String product_common_detail, String product_info, String creater, Date create_time, String updater, Date update_time, boolean is_delete, ArrayList<AttributeEntity> product_attributes) {
-        this.product_id = product_id;
-        this.product_price = product_price;
-        this.product_img = product_img;
-        this.product_num = product_num;
-        this.product_sale = product_sale;
-        this.product_name = product_name;
-        this.product_common_detail = product_common_detail;
-        this.product_info = product_info;
-        this.creater = creater;
-        this.create_time = create_time;
-        this.updater = updater;
-        this.update_time = update_time;
-        this.is_delete = is_delete;
-        this.product_attributes = product_attributes;
+    public Integer getProduct_color() {
+        return product_color;
+    }
+
+    public void setProduct_color(Integer product_color) {
+        this.product_color = product_color;
     }
 
     public String getProduct_common_detail() {

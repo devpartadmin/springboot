@@ -1,7 +1,6 @@
 package com.sarnath.sshop.service;
 
 import com.sarnath.sshop.entity.ProductEntity;
-import com.sarnath.sshop.entity.vo.ResultVO;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -12,6 +11,4 @@ import java.util.ArrayList;
  */
 public interface ProductService {
     ArrayList<ProductEntity> getAllProducts();
-
-    ResultVO getProductById(Integer id);
 }

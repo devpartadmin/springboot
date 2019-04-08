@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sshop@192.168.8.236">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="sshop">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <table id="4" parent="2" name="M_SYS_ADMIN"/>
+    <table id="5" parent="2" name="attribute"/>
+    <table id="6" parent="2" name="attribute_content"/>
+    <table id="7" parent="2" name="user_table"/>
+    <column id="8" parent="4" name="SysAdminID">
+      <Position>1</Position>
+      <Comment>系统管理员编号</Comment>
+      <DataType>int(12)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="9" parent="4" name="SysAdminAccNo">
+      <Position>2</Position>
+      <Comment>系统管理员账号</Comment>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="10" parent="4" name="SysAdminName">
+      <Position>3</Position>
+      <Comment>系统管理员姓名</Comment>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="11" parent="4" name="Mobile">
+      <Position>4</Position>
+      <Comment>手机号码</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="12" parent="4" name="Email">
+      <Position>5</Position>
+      <Comment>邮箱地址</Comment>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="13" parent="4" name="Status">
+      <Position>6</Position>
+      <Comment>状态</Comment>
+      <DataType>varchar(3)|0</DataType>
+    </column>
+    <column id="14" parent="4" name="Remarks">
+      <Position>7</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(1024)|0</DataType>
+    </column>
+    <column id="15" parent="4" name="Password">
+      <Position>8</Position>
+      <Comment>密码</Comment>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="16" parent="4" name="FaceImage">
+      <Position>9</Position>
+      <Comment>头像</Comment>
+      <DataType>int(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="4" name="CreateTime">
+      <Position>10</Position>
+      <Comment>字段创建时间YYYYMMDDHHmmSS</Comment>
+      <DataType>varchar(14)|0</DataType>
+    </column>
+    <column id="18" parent="4" name="CreateUser">
+      <Position>11</Position>
+      <Comment>字段创建者ID</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="19" parent="4" name="UpdateTime">
+      <Position>12</Position>
+      <Comment>字段更新时间YYYYMMDDHHmmSS</Comment>
+      <DataType>varchar(14)|0</DataType>
+    </column>
+    <column id="20" parent="4" name="UpdateUser">
+      <Position>13</Position>
+      <Comment>字段更新者ID</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="21" parent="4" name="Valid">
+      <Position>14</Position>
+      <Comment>逻辑删除的Flag0:未删除 非0:已删除</Comment>
+      <DataType>int(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="4" name="Version">
+      <Position>15</Position>
+      <Comment>排他用该字段的版本</Comment>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="23" parent="4" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SysAdminID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="5" name="attribute_id">
+      <Position>1</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="25" parent="5" name="type_id">
+      <Position>2</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="5" name="relation_id">
+      <Position>3</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="5" name="attribute_name">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="28" parent="5" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>attribute_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="6" name="content_id">
+      <Position>1</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="6" name="kinds_id">
+      <Position>2</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="6" name="relation_id">
+      <Position>3</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="6" name="content_name">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="33" parent="6" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>content_id
+kinds_id
+relation_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="7" name="user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="35" parent="7" name="user_name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="7" name="user_email">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="7" name="user_sex">
+      <Position>4</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="7" name="user_phone">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="7" name="last_login_time">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="40" parent="7" name="user_img">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="7" name="user_creater">
+      <Position>8</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="42" parent="7" name="create_time">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="43" parent="7" name="user_updater">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="44" parent="7" name="update_time">
+      <Position>11</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="45" parent="7" name="user_is_delete">
+      <Position>12</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="46" parent="7" name="user_password">
+      <Position>13</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="47" parent="7" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
