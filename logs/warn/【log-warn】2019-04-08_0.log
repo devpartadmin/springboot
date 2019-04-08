@@ -11924,3 +11924,50 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 ### SQL: SELECT * FROM user_table WHERE user_name = ?
 ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'sshop.user_table' doesn't exist
 ; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'sshop.user_table' doesn't exist
+2019-08-08 18:08:15:266[http-nio-8081-exec-1]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2019-08-08 18:08:55:560[redisMessageListenerContainer-4]WARN  o.s.s.data.redis.RedisOperationsSessionRepository-Unable to publish SessionDestroyedEvent for session f9fa9cc1-a041-4553-a91c-94f2d98d7545
+2019-09-08 18:09:12:416[http-nio-8081-exec-6]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: com.sarnath.sshop.exception.SellException: 请先登录
+2019-10-08 18:10:35:333[http-nio-8081-exec-10]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2019-10-08 18:10:50:707[http-nio-8081-exec-2]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: com.sarnath.sshop.exception.SellException: 请先登录
+2019-11-08 18:11:00:434[http-nio-8081-exec-3]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: com.sarnath.sshop.exception.SellException: 请先登录
+2019-12-08 18:12:44:979[redisMessageListenerContainer-3]WARN  o.s.s.data.redis.RedisOperationsSessionRepository-Unable to publish SessionDestroyedEvent for session ac5a540e-b408-45fe-9315-c833d99d918b
+2019-13-08 18:13:02:689[http-nio-8081-exec-1]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: com.sarnath.sshop.exception.SellException: 请先登录
+2019-19-08 18:19:40:524[http-nio-8081-exec-1]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: com.sarnath.sshop.exception.SellException: 请先登录
+2019-20-08 18:20:01:610[http-nio-8081-exec-4]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: com.sarnath.sshop.exception.SellException: 请先登录
+2019-21-08 18:21:32:595[http-nio-8081-exec-2]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: com.sarnath.sshop.exception.SellException: 请先登录
+2019-23-08 18:23:42:666[http-nio-8081-exec-1]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: com.sarnath.sshop.exception.SellException: 请先登录
+2019-24-08 18:24:21:803[http-nio-8081-exec-4]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'sshop.attribute' doesn't exist
+### The error may exist in file [D:\Documents\GitHub\springboot\springboot-shop\target\classes\Mapper\ProductMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT count(0) FROM (SELECT * FROM product_info p LEFT JOIN attribute a ON a.type_id = 1) r LEFT JOIN attribute_content c ON r.relation_id = c.relation_id AND c.kinds_id = r.product_id
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'sshop.attribute' doesn't exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'sshop.attribute' doesn't exist
+2019-25-08 18:25:29:298[http-nio-8081-exec-1]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: org.springframework.dao.DataIntegrityViolationException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'relation_id' in field list is ambiguous
+### The error may exist in file [D:\Documents\GitHub\springboot\springboot-shop\target\classes\Mapper\ProductMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT product_id,product_price,product_img,product_num,product_sale,product_common_detail ,product_name,product_info,creater,create_time,updater,update_time,is_delete,attribute_id,type_id,relation_id,attribute_name,content_id,kinds_id,relation_id, content_name FROM (SELECT * FROM product_info p LEFT JOIN attribute_info a ON a.type_id=1) r LEFT JOIN attribute_content c         ON r.relation_id=c.relation_id AND c.kinds_id=r.product_id LIMIT ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'relation_id' in field list is ambiguous
+; ]; Column 'relation_id' in field list is ambiguous; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'relation_id' in field list is ambiguous
+2019-29-08 18:29:06:397[http-nio-8081-exec-1]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'attribute_info.relation_id' in 'field list'
+### The error may exist in file [D:\Documents\GitHub\springboot\springboot-shop\target\classes\Mapper\ProductMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT product_id,product_price,product_img,product_num,product_sale,product_common_detail ,product_name,product_info,creater,create_time,updater,update_time,is_delete,attribute_id,type_id,attribute_info.relation_id,attribute_name,content_id,kinds_id,relation_id, content_name FROM (SELECT * FROM product_info p LEFT JOIN attribute_info a ON a.type_id=1) r LEFT JOIN attribute_content c         ON r.relation_id=c.relation_id AND c.kinds_id=r.product_id LIMIT ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'attribute_info.relation_id' in 'field list'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'attribute_info.relation_id' in 'field list'
+2019-30-08 18:30:26:669[http-nio-8081-exec-2]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: org.springframework.dao.DataIntegrityViolationException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'relation_id' in field list is ambiguous
+### The error may exist in file [D:\Documents\GitHub\springboot\springboot-shop\target\classes\Mapper\ProductMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT product_id,product_price,product_img,product_num,product_sale,product_common_detail ,product_name,product_info,creater,create_time,updater,update_time,is_delete,attribute_id,type_id,relation_id,attribute_name,content_id,kinds_id, content_name FROM (SELECT * FROM product_info p LEFT JOIN attribute_info a ON a.type_id=1) r LEFT JOIN attribute_content c         ON r.relation_id=c.relation_id AND c.kinds_id=r.product_id LIMIT ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'relation_id' in field list is ambiguous
+; ]; Column 'relation_id' in field list is ambiguous; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'relation_id' in field list is ambiguous
+2019-31-08 18:31:32:921[redisMessageListenerContainer-5]WARN  o.s.s.data.redis.RedisOperationsSessionRepository-Unable to publish SessionDestroyedEvent for session 02308459-4aee-4cc7-9edc-7d85cbdeecf0
+2019-32-08 18:32:46:895[http-nio-8081-exec-1]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: com.sarnath.sshop.exception.SellException: 请先登录
+2019-33-08 18:33:30:958[http-nio-8081-exec-4]WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Resolved exception caused by Handler execution: com.sarnath.sshop.exception.SellException: 请先登录

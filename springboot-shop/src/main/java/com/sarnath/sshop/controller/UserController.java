@@ -6,15 +6,19 @@ import com.sarnath.sshop.entity.vo.ResultVO;
 import com.sarnath.sshop.service.UserService;
 import com.sarnath.sshop.utils.ResultVOUtil;
 import com.sarnath.sshop.utils.UserForm2Entity;
+import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 @CrossOrigin
 @RestController
@@ -37,14 +41,18 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResultVO<UserEntity> login(String userName, String userPassword, HttpServletRequest request) {
+    public ResultVO<UserEntity> login(String userName, String userPassword, HttpServletRequest request, HttpServletResponse response) {
         if (userName == null || userPassword == null) {
             return ResultVOUtil.error(1003, "用户名密码不能为空！");
         }
         Map<String, String> map = new HashMap<>();
         if (!StringUtils.isEmpty(userName) && !StringUtils.isEmpty(userPassword)){
             if (userService.login(userName, userPassword)) {
-                request.getSession().setAttribute("sessionid", userService.getUserId(userName));
+                String uuid=UUID.randomUUID().toString();
+                request.getSession().setAttribute("token", uuid);
+                Cookie cookie=new Cookie("token",uuid);
+                cookie.setPath("/");
+                response.addCookie(cookie);
                 map.put("userName", userName);
                 return ResultVOUtil.success(map);
             }

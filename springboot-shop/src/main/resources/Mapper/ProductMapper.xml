@@ -35,14 +35,15 @@
     </resultMap>
     <select id="getAllProducts" resultType="com.sarnath.sshop.entity.ProductEntity" resultMap="product">
         SELECT product_id,product_price,product_img,product_num,product_sale,product_common_detail
-,product_name,product_info,creater,create_time,updater,update_time,is_delete,attribute_id,type_id,relation_id,attribute_name,content_id,kinds_id,relation_id,
-content_name FROM (SELECT * FROM product_info p LEFT JOIN attribute a ON a.type_id=1) r LEFT JOIN attribute_content c
+,product_name,product_info,creater,create_time,updater,update_time,is_delete,attribute_id,type_id,r.relation_id,attribute_name,content_id,kinds_id,
+content_name FROM (SELECT * FROM product_info p LEFT JOIN attribute_info a ON a.type_id=1) r LEFT JOIN attribute_content c
         ON r.relation_id=c.relation_id AND c.kinds_id=r.product_id
     </select>
     <select id="getProductById" resultType="com.sarnath.sshop.entity.ProductEntity" resultMap="product">
         SELECT product_id,product_price,product_img,product_num,product_sale,product_common_detail
-,product_name,product_info,creater,create_time,updater,update_time,is_delete,attribute_id,type_id,relation_id,attribute_name,content_id,kinds_id,relation_id,
-content_name FROM (SELECT * FROM product_info p LEFT JOIN attribute a ON a.type_id=1 WHERE p.product_id=#{id}) r LEFT JOIN attribute_content c
+,product_name,product_info,creater,create_time,updater,update_time,is_delete,attribute_id,type_id,r.relation_id,attribute_name,content_id,kinds_id,
+content_name
+FROM (SELECT * FROM product_info p LEFT JOIN attribute_info a ON a.type_id=1 WHERE p.product_id=#{id}) r LEFT JOIN attribute_content c
         ON r.relation_id=c.relation_id AND c.kinds_id=r.product_id
     </select>
 </mapper>

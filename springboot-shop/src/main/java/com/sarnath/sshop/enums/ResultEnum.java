@@ -36,7 +36,9 @@ public enum ResultEnum {
 
     LOGOUT_SUCCESS(26, "登出成功"),
 
-    WRONG_ATTRIBUTE(27,"参数错误")
+    WRONG_ATTRIBUTE(27,"参数错误"),
+
+    LOGIN_PLEASE(28,"请先登录")
     ;
 
     private Integer code;
