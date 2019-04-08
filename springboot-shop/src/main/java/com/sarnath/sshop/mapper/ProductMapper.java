@@ -39,4 +39,5 @@ import java.util.ArrayList;
 @Mapper
 public interface ProductMapper {
     ArrayList<ProductEntity> getAllProducts();
+    ProductEntity getProductById(Integer id);
 }

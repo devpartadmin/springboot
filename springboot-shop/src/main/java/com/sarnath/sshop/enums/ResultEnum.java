@@ -35,6 +35,8 @@ public enum ResultEnum {
     LOGIN_FAIL(25, "登录失败, 登录信息不正确"),
 
     LOGOUT_SUCCESS(26, "登出成功"),
+
+    WRONG_ATTRIBUTE(27,"参数错误")
     ;
 
     private Integer code;

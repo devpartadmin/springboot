@@ -57,4 +57,5 @@ public class ProductController {
         PageInfo<ProductEntity> page=new PageInfo<>(allProducts);
         return page;
     }
+
 }
