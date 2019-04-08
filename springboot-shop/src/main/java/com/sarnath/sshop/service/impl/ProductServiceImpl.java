@@ -27,7 +27,7 @@ package com.sarnath.sshop.service.impl;/**
  * 哪错了？             错哪了？              我是谁？
  */
 
-import com.sarnath.sshop.entity.Product;
+import com.sarnath.sshop.entity.ProductEntity;
 import com.sarnath.sshop.mapper.ProductMapper;
 import com.sarnath.sshop.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +44,7 @@ public class ProductServiceImpl implements ProductService {
     private ProductMapper mapper;
 
     @Override
-    public ArrayList<Product> getAllProducts() {
+    public ArrayList<ProductEntity> getAllProducts() {
         return mapper.getAllProducts();
     }
 }

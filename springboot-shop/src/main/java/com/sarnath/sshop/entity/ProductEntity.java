@@ -33,7 +33,7 @@ import java.util.Date;
 /** @Author ShaneLau
  * Created by Shane Lau on 2019/4/4.
  */
-public class Product {
+public class ProductEntity {
     private Integer product_id;
     private Double product_price;
     private String product_img;
@@ -48,9 +48,9 @@ public class Product {
     private String updater;
     private Date update_time;
     private boolean is_delete;
-    private ArrayList<Attribute> product_attributes;
+    private ArrayList<AttributeEntity> product_attributes;
 
-    public Product(Integer product_id, Double product_price, String product_img, Integer product_num, Integer product_sale, String product_name, Integer product_color, String product_common_detail, String product_info, String creater, Date create_time, String updater, Date update_time, boolean is_delete, ArrayList<Attribute> product_attributes) {
+    public ProductEntity(Integer product_id, Double product_price, String product_img, Integer product_num, Integer product_sale, String product_name, Integer product_color, String product_common_detail, String product_info, String creater, Date create_time, String updater, Date update_time, boolean is_delete, ArrayList<AttributeEntity> product_attributes) {
         this.product_id = product_id;
         this.product_price = product_price;
         this.product_img = product_img;
@@ -68,17 +68,17 @@ public class Product {
         this.product_attributes = product_attributes;
     }
 
-    public ArrayList<Attribute> getProduct_attributes() {
+    public ArrayList<AttributeEntity> getProduct_attributes() {
 
         return product_attributes;
     }
 
-    public void setProduct_attributes(ArrayList<Attribute> product_attributes) {
+    public void setProduct_attributes(ArrayList<AttributeEntity> product_attributes) {
         this.product_attributes = product_attributes;
     }
 
 
-    public Product() {
+    public ProductEntity() {
     }
 
     public Integer getProduct_id() {

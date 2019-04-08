@@ -2,7 +2,7 @@ package com.sarnath.sshop.entity;
 
 import java.util.Date;
 
-public class MSysAdmin {
+public class MSysAdminEntity {
 
     private Integer sysAdminID;
     private String sysAdminAccNo;

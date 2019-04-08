@@ -1,6 +1,6 @@
 package com.sarnath.sshop.service.impl;
 
-import com.sarnath.sshop.entity.User;
+import com.sarnath.sshop.entity.UserEntity;
 import com.sarnath.sshop.mapper.UserMapper;
 import com.sarnath.sshop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,13 +13,13 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public Boolean register(User user) {
+    public Boolean register(UserEntity user) {
         return userMapper.insert(user);
     }
 
     @Override
     public Boolean login(String userName, String userPassword) {
-        User user = userMapper.findUserByName(userName);
+        UserEntity user = userMapper.findUserByName(userName);
         if (user == null || !user.getUserPassword().equals(userPassword)) {
             return false;
         }

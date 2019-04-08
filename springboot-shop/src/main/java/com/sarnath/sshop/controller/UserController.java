@@ -1,6 +1,6 @@
 package com.sarnath.sshop.controller;
 
-import com.sarnath.sshop.entity.User;
+import com.sarnath.sshop.entity.UserEntity;
 import com.sarnath.sshop.entity.form.UserForm;
 import com.sarnath.sshop.entity.vo.ResultVO;
 import com.sarnath.sshop.service.UserService;
@@ -29,7 +29,7 @@ public class UserController {
         if (bindingResult.hasErrors()) {
             return ResultVOUtil.error(2000, bindingResult.getFieldError().getDefaultMessage());
         }
-        User user = UserForm2Entity.convert(userForm);
+        UserEntity user = UserForm2Entity.convert(userForm);
         userService.register(user);
         Map<String, Integer> map = new HashMap<String, Integer>();
         map.put("userId", user.getUserId());
@@ -37,7 +37,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResultVO<Map<String, String>> login(String userName, String userPassword, HttpServletRequest request) {
+    public ResultVO<UserEntity> login(String userName, String userPassword, HttpServletRequest request) {
         if (userName == null || userPassword == null) {
             return ResultVOUtil.error(1003, "用户名密码不能为空！");
         }

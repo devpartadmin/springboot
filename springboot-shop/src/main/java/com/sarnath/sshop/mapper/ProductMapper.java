@@ -27,8 +27,8 @@ package com.sarnath.sshop.mapper;/**
 *                     哪错了？             错哪了？              我是谁？
 */
 
-import com.sarnath.sshop.entity.Attribute;
-import com.sarnath.sshop.entity.Product;
+import com.sarnath.sshop.entity.AttributeEntity;
+import com.sarnath.sshop.entity.ProductEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.ArrayList;
@@ -38,5 +38,5 @@ import java.util.ArrayList;
  */
 @Mapper
 public interface ProductMapper {
-    ArrayList<Product> getAllProducts();
+    ArrayList<ProductEntity> getAllProducts();
 }

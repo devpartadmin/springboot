@@ -1,6 +1,6 @@
 package com.sarnath.sshop.service;
 
-import com.sarnath.sshop.entity.Product;
+import com.sarnath.sshop.entity.ProductEntity;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -10,5 +10,5 @@ import java.util.ArrayList;
  * Created by Shane Lau on 2019/4/4.
  */
 public interface ProductService {
-    ArrayList<Product> getAllProducts();
+    ArrayList<ProductEntity> getAllProducts();
 }

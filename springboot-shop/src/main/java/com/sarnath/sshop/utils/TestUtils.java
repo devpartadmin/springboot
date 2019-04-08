@@ -1,13 +1,13 @@
 package com.sarnath.sshop.utils;
 
-import com.sarnath.sshop.entity.MSysAdmin;
+import com.sarnath.sshop.entity.MSysAdminEntity;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class TestUtils {
-    public static MSysAdmin getMSysAdmin(){
-        MSysAdmin mSysAdmin = new MSysAdmin();
+    public static MSysAdminEntity getMSysAdmin(){
+        MSysAdminEntity mSysAdmin = new MSysAdminEntity();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         mSysAdmin.setSysAdminID(1);
         mSysAdmin.setSysAdminAccNo("111");

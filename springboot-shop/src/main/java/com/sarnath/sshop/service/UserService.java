@@ -1,11 +1,11 @@
 package com.sarnath.sshop.service;
 
-import com.sarnath.sshop.entity.User;
+import com.sarnath.sshop.entity.UserEntity;
 
 public interface UserService {
 
     //注册
-    Boolean register(User user);
+    Boolean register(UserEntity user);
 
     //登陆
     Boolean login(String userName, String userPassword);

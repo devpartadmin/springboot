@@ -32,12 +32,12 @@ import java.util.ArrayList;
 /** @Author ShaneLau
  * Created by Shane Lau on 2019/4/4.
  */
-public class Attribute {
+public class AttributeEntity {
     private Integer attribute_id;
     private Integer type_id;
     private Integer relation_id;
     private String attr_name;
-    private AttributeContent attr_content;
+    private AttributeContentEntity attr_content;
 
     public Integer getAttribute_id() {
         return attribute_id;
@@ -71,15 +71,15 @@ public class Attribute {
         this.attr_name = attr_name;
     }
 
-    public AttributeContent getAttr_content() {
+    public AttributeContentEntity getAttr_content() {
         return attr_content;
     }
 
-    public void setAttr_content(AttributeContent attr_content) {
+    public void setAttr_content(AttributeContentEntity attr_content) {
         this.attr_content = attr_content;
     }
 
-    public Attribute(Integer attribute_id, Integer type_id, Integer relation_id, String attr_name, AttributeContent attr_content) {
+    public AttributeEntity(Integer attribute_id, Integer type_id, Integer relation_id, String attr_name, AttributeContentEntity attr_content) {
 
         this.attribute_id = attribute_id;
         this.type_id = type_id;
@@ -88,7 +88,7 @@ public class Attribute {
         this.attr_content = attr_content;
     }
 
-    public Attribute() {
+    public AttributeEntity() {
 
     }
 }

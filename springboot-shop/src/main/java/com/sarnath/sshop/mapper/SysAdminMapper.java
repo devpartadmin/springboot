@@ -1,13 +1,13 @@
 package com.sarnath.sshop.mapper;
 
-import com.sarnath.sshop.entity.MSysAdmin;
+import com.sarnath.sshop.entity.MSysAdminEntity;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 
 public interface SysAdminMapper {
 
-    MSysAdmin findSysAdminById(Integer id);
+    MSysAdminEntity findSysAdminById(Integer id);
 
-    Boolean insert(MSysAdmin mSysAdmin);
+    Boolean insert(MSysAdminEntity mSysAdmin);
 
 }

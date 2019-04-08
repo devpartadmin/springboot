@@ -1,6 +1,6 @@
 package com.sarnath.sshop.entity;
 
-public class ReciveAddress {
+public class ReciveAddressEntity {
 	
 	//收货地址Id
 	private Long id;
@@ -12,6 +12,7 @@ public class ReciveAddress {
 	private String addressPerson;
 	//收货人联系方式
 	private String addressPhone;
+	
 	
 	
 }

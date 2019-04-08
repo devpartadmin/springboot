@@ -29,7 +29,7 @@ package com.sarnath.sshop.controller;/**
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.sarnath.sshop.entity.Product;
+import com.sarnath.sshop.entity.ProductEntity;
 import com.sarnath.sshop.entity.vo.ResultVO;
 import com.sarnath.sshop.service.ProductService;
 import com.sarnath.sshop.utils.ResultVOUtil;
@@ -51,10 +51,10 @@ public class ProductController {
     private ProductService service;
 
     @RequestMapping("getIndexProducts")
-    public PageInfo<Product> getallProducts(){
+    public PageInfo<ProductEntity> getallProducts(){
         PageHelper.startPage(1,5);
-        ArrayList<Product> allProducts = service.getAllProducts();
-        PageInfo<Product> page=new PageInfo<>(allProducts);
+        ArrayList<ProductEntity> allProducts = service.getAllProducts();
+        PageInfo<ProductEntity> page=new PageInfo<>(allProducts);
         return page;
     }
 }

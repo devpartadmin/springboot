@@ -29,7 +29,7 @@ package com.sarnath.sshop.entity;/**
 /** @Author ShaneLau
  * Created by Shane Lau on 2019/4/4.
  */
-public class AttributeContent {
+public class AttributeContentEntity {
     private Integer content_id;
     private Integer kinds_id;
     private Integer relation_id;
@@ -67,7 +67,7 @@ public class AttributeContent {
         this.content_name = content_name;
     }
 
-    public AttributeContent(Integer content_id, Integer kinds_id, Integer relation_id, String content_name) {
+    public AttributeContentEntity(Integer content_id, Integer kinds_id, Integer relation_id, String content_name) {
 
         this.content_id = content_id;
         this.kinds_id = kinds_id;
@@ -75,7 +75,7 @@ public class AttributeContent {
         this.content_name = content_name;
     }
 
-    public AttributeContent() {
+    public AttributeContentEntity() {
 
     }
 }

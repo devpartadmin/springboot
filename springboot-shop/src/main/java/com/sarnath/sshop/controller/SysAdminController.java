@@ -1,6 +1,6 @@
 package com.sarnath.sshop.controller;
 
-import com.sarnath.sshop.entity.MSysAdmin;
+import com.sarnath.sshop.entity.MSysAdminEntity;
 import com.sarnath.sshop.entity.form.MSysAdminForm;
 import com.sarnath.sshop.entity.vo.ResultVO;
 import com.sarnath.sshop.service.SysAdminService;
@@ -29,7 +29,7 @@ public class SysAdminController {
     @PostMapping("add")
     public ResultVO<Map<String, Integer>> add(@Valid MSysAdminForm mSysAdminForm) {
 //        MSysAdmin mSysAdmin = TestUtils.getMSysAdmin();
-        MSysAdmin mSysAdmin = AdminForm2Entity.convert(mSysAdminForm);
+        MSysAdminEntity mSysAdmin = AdminForm2Entity.convert(mSysAdminForm);
         sysAdminService.insert(mSysAdmin);
         Map<String, Integer> map = new HashMap<String, Integer>();
         map.put("SysAdminID", mSysAdmin.getSysAdminID());
