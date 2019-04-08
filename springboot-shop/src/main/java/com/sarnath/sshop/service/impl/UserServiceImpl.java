@@ -1,6 +1,8 @@
 package com.sarnath.sshop.service.impl;
 
 import com.sarnath.sshop.entity.UserEntity;
+import com.sarnath.sshop.enums.ResultEnum;
+import com.sarnath.sshop.exception.SellException;
 import com.sarnath.sshop.mapper.UserMapper;
 import com.sarnath.sshop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
