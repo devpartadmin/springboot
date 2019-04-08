@@ -1,7 +1,6 @@
 server:
   url: '192.168.8.236'
   port: 8081
-
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -44,6 +43,9 @@ spring:
         max-file-size: 10MB
         # 上传文件总的最大值
         max-request-size: 100MB
+  redis:
+    host: 192.168.9.40
+    port: 6379
 mybatis:
   mapper-locations: classpath:Mapper/**/*.xml
   type-aliases-package: com.sarnath.sshop.entity

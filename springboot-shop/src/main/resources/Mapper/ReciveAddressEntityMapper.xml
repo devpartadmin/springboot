@@ -19,9 +19,9 @@
 		<result column="createuser" property="createUser" />
 		<result column="updatetime" property="updateTime" />
 		<result column="updateuser" property="updateUser" />
-		<result column="valid" property="valid"
+		<result column="valid" property="validEnum"
 			typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler"
-			javaType="com.sarnath.sshop.enums.validEnum" />
+			javaType="com.sarnath.sshop.enums.ValidEnum" />
 	</resultMap>
 	<select id="getReciveAddressListById" parameterType="int"
 		resultMap="ReciveAddressEntity">

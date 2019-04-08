@@ -2,6 +2,7 @@ package com.sarnath.sshop.enums;
 
 public enum ValidEnum {
 
+
 	NOTDELETED(0, "未删除"), DELETED(1, "已删除");
 
 	private int id;
@@ -23,6 +24,17 @@ public enum ValidEnum {
 
 	private ValidEnum(int id, String name) {
 		this.id = id;
+		this.name = name;
+	}
+
+	ValidEnum() {
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
 		this.name = name;
 	}
 

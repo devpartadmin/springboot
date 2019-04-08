@@ -171,3 +171,383 @@
 2019-17-08 14:17:59:894[http-nio-8081-exec-1]INFO  org.springframework.web.servlet.DispatcherServlet-FrameworkServlet 'dispatcherServlet': initialization started
 2019-17-08 14:17:59:919[http-nio-8081-exec-1]INFO  org.springframework.web.servlet.DispatcherServlet-FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
 2019-17-08 14:17:59:990[http-nio-8081-exec-1]INFO  com.alibaba.druid.pool.DruidDataSource-{dataSource-1} inited
+2019-30-08 16:30:22:201[restartedMain]INFO  com.sarnath.sshop.Application-Starting Application on PC201507241719 with PID 12956 (D:\Documents\GitHub\springboot\springboot-shop\target\classes started by Administrator in D:\Documents\GitHub\springboot)
+2019-30-08 16:30:22:205[restartedMain]INFO  com.sarnath.sshop.Application-No active profile set, falling back to default profiles: default
+2019-30-08 16:30:22:336[restartedMain]INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6d24c8a: startup date [Mon Apr 08 16:30:22 CST 2019]; root of context hierarchy
+2019-30-08 16:30:23:411[restartedMain]INFO  o.s.d.r.config.RepositoryConfigurationDelegate-Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-30-08 16:30:23:704[restartedMain]INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor-JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-30-08 16:30:23:795[restartedMain]INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$429c2d00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-30-08 16:30:24:691[restartedMain]INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer-Tomcat initialized with port(s): 8081 (http)
+2019-30-08 16:30:24:706[restartedMain]INFO  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8081"]
+2019-30-08 16:30:24:717[restartedMain]INFO  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2019-30-08 16:30:24:717[restartedMain]INFO  org.apache.catalina.core.StandardEngine-Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-30-08 16:30:24:721[localhost-startStop-1]INFO  org.apache.catalina.core.AprLifecycleListener-The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Users\Administrator\Desktop\New folder (2)\apache-tomcat-6.0.16\lib;C:\Users\Administrator\Desktop\New folder (2)\apache-tomcat-6.0.16\bin;E:\SQLServer X86\100\Tools\Binn\;E:\SQL Server 2008\100\Tools\Binn\;E:\SQL Server 2008\100\DTS\Binn\;E:\SQLServer X86\100\Tools\Binn\VSShell\Common7\IDE\;E:\SQLServer X86\100\DTS\Binn\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;D:\Redis\;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;.]
+2019-30-08 16:30:24:815[localhost-startStop-1]INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+2019-30-08 16:30:24:816[localhost-startStop-1]INFO  org.springframework.web.context.ContextLoader-Root WebApplicationContext: initialization completed in 2480 ms
+2019-30-08 16:30:25:166[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-30-08 16:30:25:166[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'sessionRepositoryFilter' to: [/*]
+2019-30-08 16:30:25:166[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-30-08 16:30:25:166[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-30-08 16:30:25:166[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'requestContextFilter' to: [/*]
+2019-30-08 16:30:25:167[localhost-startStop-1]INFO  o.s.boot.web.servlet.ServletRegistrationBean-Servlet dispatcherServlet mapped to [/]
+2019-30-08 16:30:25:767[restartedMain]INFO  io.lettuce.core.EpollProvider-Starting without optional epoll library
+2019-30-08 16:30:25:768[restartedMain]INFO  io.lettuce.core.KqueueProvider-Starting without optional kqueue library
+2019-30-08 16:30:26:620[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.CommandHandler-null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1108)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:345)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:646)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:498)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:460)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2019-30-08 16:30:26:731[lettuce-eventExecutorLoop-1-1]INFO  io.lettuce.core.protocol.ConnectionWatchdog-Reconnecting, last destination was /192.168.9.40:6379
+2019-30-08 16:30:26:755[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:26:837[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:26:933[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:27:037[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:27:136[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:27:234[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:27:335[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:27:435[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:27:536[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:27:632[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:27:733[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:27:832[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:27:931[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:28:036[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:28:134[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:28:233[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:28:333[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:28:433[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:28:535[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:28:632[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:28:735[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:28:833[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:28:933[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:29:031[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:29:133[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:29:235[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:29:332[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:29:435[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:29:535[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:29:633[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:29:733[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:29:832[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:29:936[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:30:035[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:30:134[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:30:231[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:30:336[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:30:433[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:30:535[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:30:634[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:30:736[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:30:834[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:30:933[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:31:035[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:31:130[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:31:237[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:31:331[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:31:435[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:31:536[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:31:636[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:31:734[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:31:828[lettuce-eventExecutorLoop-1-4]INFO  io.lettuce.core.protocol.ConnectionWatchdog-Reconnecting, last destination was /192.168.9.40:6379
+2019-30-08 16:30:31:837[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:31:934[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:32:033[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:32:137[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:32:235[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:32:335[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:32:435[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:32:536[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:32:635[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:32:733[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:32:834[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:32:935[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:33:034[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:33:132[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:33:235[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:33:332[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:33:434[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:33:535[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:33:635[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:33:736[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:33:831[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:33:936[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:34:033[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:34:134[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:34:237[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:34:338[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:34:433[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:34:534[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:34:637[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:34:732[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:34:838[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:34:933[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:35:034[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:35:138[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:35:237[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:35:337[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:35:434[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:35:532[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:35:631[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:35:731[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:35:831[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:35:932[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:36:032[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:36:134[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:36:237[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:36:333[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:36:430[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:36:536[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:36:633[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:36:734[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:36:828[lettuce-eventExecutorLoop-1-6]INFO  io.lettuce.core.protocol.ConnectionWatchdog-Reconnecting, last destination was /192.168.9.40:6379
+2019-30-08 16:30:36:833[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:36:937[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:37:035[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:37:133[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:37:231[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:37:333[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:37:434[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:37:534[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:37:633[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:37:737[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:37:837[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:37:934[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:38:034[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:38:132[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:38:237[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:38:333[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:38:437[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:38:533[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:38:639[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:38:736[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:38:836[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:38:935[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:39:035[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:39:137[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:39:233[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:39:339[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:39:433[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:39:533[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:39:635[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:39:733[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:39:833[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:39:933[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:40:036[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:40:135[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:40:235[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:40:332[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:40:431[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:40:532[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:40:632[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:40:731[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:40:833[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:40:934[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:41:033[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:41:137[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:41:233[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:41:338[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:41:434[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:41:535[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:41:634[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:41:733[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:41:828[lettuce-eventExecutorLoop-1-8]INFO  io.lettuce.core.protocol.ConnectionWatchdog-Reconnecting, last destination was /192.168.9.40:6379
+2019-30-08 16:30:41:838[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:41:936[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:42:034[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:42:131[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:42:230[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:42:334[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:42:433[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:42:532[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:42:634[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:42:736[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:42:833[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:42:933[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:43:031[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:43:131[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:43:235[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:43:335[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:43:437[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:43:535[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:43:635[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:43:734[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:43:832[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:43:932[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:44:031[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:44:135[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:44:232[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:44:333[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:44:433[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:44:536[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:44:638[lettuce-nioEventLoop-4-5]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:44:733[lettuce-nioEventLoop-4-6]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:44:833[lettuce-nioEventLoop-4-7]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:44:932[lettuce-nioEventLoop-4-8]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:45:033[lettuce-nioEventLoop-4-1]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:45:137[lettuce-nioEventLoop-4-2]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:45:232[lettuce-nioEventLoop-4-3]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:45:335[lettuce-nioEventLoop-4-4]INFO  io.lettuce.core.protocol.ReconnectionHandler-Reconnected to 192.168.9.40:6379
+2019-30-08 16:30:46:467[restartedMain]INFO  org.apache.catalina.core.StandardService-Stopping service [Tomcat]
+2019-30-08 16:30:46:496[restartedMain]INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener-
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-40-08 16:40:28:705[restartedMain]INFO  com.sarnath.sshop.Application-Starting Application on PC201507241719 with PID 14012 (D:\Documents\GitHub\springboot\springboot-shop\target\classes started by Administrator in D:\Documents\GitHub\springboot)
+2019-40-08 16:40:28:708[restartedMain]INFO  com.sarnath.sshop.Application-No active profile set, falling back to default profiles: default
+2019-40-08 16:40:28:753[restartedMain]INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@968fa53: startup date [Mon Apr 08 16:40:28 CST 2019]; root of context hierarchy
+2019-40-08 16:40:29:883[restartedMain]INFO  o.s.d.r.config.RepositoryConfigurationDelegate-Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-40-08 16:40:30:135[restartedMain]INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor-JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-40-08 16:40:30:227[restartedMain]INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fd8cd33c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-40-08 16:40:31:061[restartedMain]INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer-Tomcat initialized with port(s): 8081 (http)
+2019-40-08 16:40:31:073[restartedMain]INFO  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8081"]
+2019-40-08 16:40:31:081[restartedMain]INFO  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2019-40-08 16:40:31:081[restartedMain]INFO  org.apache.catalina.core.StandardEngine-Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-40-08 16:40:31:084[localhost-startStop-1]INFO  org.apache.catalina.core.AprLifecycleListener-The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Users\Administrator\Desktop\New folder (2)\apache-tomcat-6.0.16\lib;C:\Users\Administrator\Desktop\New folder (2)\apache-tomcat-6.0.16\bin;E:\SQLServer X86\100\Tools\Binn\;E:\SQL Server 2008\100\Tools\Binn\;E:\SQL Server 2008\100\DTS\Binn\;E:\SQLServer X86\100\Tools\Binn\VSShell\Common7\IDE\;E:\SQLServer X86\100\DTS\Binn\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;D:\Redis\;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;.]
+2019-40-08 16:40:31:173[localhost-startStop-1]INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+2019-40-08 16:40:31:173[localhost-startStop-1]INFO  org.springframework.web.context.ContextLoader-Root WebApplicationContext: initialization completed in 2421 ms
+2019-40-08 16:40:31:494[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-40-08 16:40:31:494[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'sessionRepositoryFilter' to: [/*]
+2019-40-08 16:40:31:494[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-40-08 16:40:31:495[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-40-08 16:40:31:495[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'requestContextFilter' to: [/*]
+2019-40-08 16:40:31:495[localhost-startStop-1]INFO  o.s.boot.web.servlet.ServletRegistrationBean-Servlet dispatcherServlet mapped to [/]
+2019-40-08 16:40:31:981[restartedMain]INFO  io.lettuce.core.EpollProvider-Starting without optional epoll library
+2019-40-08 16:40:31:982[restartedMain]INFO  io.lettuce.core.KqueueProvider-Starting without optional kqueue library
+2019-40-08 16:40:32:917[restartedMain]INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping-Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-40-08 16:40:33:156[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter-Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@968fa53: startup date [Mon Apr 08 16:40:28 CST 2019]; root of context hierarchy
+2019-40-08 16:40:33:216[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/product/getIndexProducts]}" onto public com.github.pagehelper.PageInfo<com.sarnath.sshop.entity.ProductEntity> com.sarnath.sshop.controller.ProductController.getallProducts()
+2019-40-08 16:40:33:221[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/admin/add],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<java.util.Map<java.lang.String, java.lang.Integer>> com.sarnath.sshop.controller.SysAdminController.add(com.sarnath.sshop.entity.form.MSysAdminForm)
+2019-40-08 16:40:33:222[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/user/register],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<java.util.Map<java.lang.String, java.lang.Integer>> com.sarnath.sshop.controller.UserController.register(com.sarnath.sshop.entity.form.UserForm,org.springframework.validation.BindingResult)
+2019-40-08 16:40:33:223[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/user/registCheck],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.sarnath.sshop.controller.UserController.checkName(java.lang.String)
+2019-40-08 16:40:33:223[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/user/session],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<java.util.Map<java.lang.String, java.lang.Integer>> com.sarnath.sshop.controller.UserController.session(javax.servlet.http.HttpServletRequest)
+2019-40-08 16:40:33:223[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/user/login],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<com.sarnath.sshop.entity.UserEntity> com.sarnath.sshop.controller.UserController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-40-08 16:40:33:225[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-40-08 16:40:33:226[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-40-08 16:40:33:251[restartedMain]INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping-Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-40-08 16:40:33:251[restartedMain]INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping-Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-40-08 16:40:33:267[restartedMain]INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Detected @ExceptionHandler methods in exceptionController
+2019-40-08 16:40:33:799[restartedMain]INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer-LiveReload server is running on port 35729
+2019-40-08 16:40:34:021[restartedMain]INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter-Registering beans for JMX exposure on startup
+2019-40-08 16:40:34:027[restartedMain]INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter-Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-40-08 16:40:34:043[restartedMain]INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter-Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-40-08 16:40:34:052[restartedMain]INFO  o.s.context.support.DefaultLifecycleProcessor-Starting beans in phase 2147483647
+2019-40-08 16:40:34:117[restartedMain]INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor-No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-40-08 16:40:34:122[restartedMain]INFO  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8081"]
+2019-40-08 16:40:34:124[restartedMain]INFO  org.apache.tomcat.util.net.NioSelectorPool-Using a shared selector for servlet write/read
+2019-40-08 16:40:34:141[restartedMain]INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer-Tomcat started on port(s): 8081 (http) with context path ''
+2019-40-08 16:40:34:145[restartedMain]INFO  com.sarnath.sshop.Application-Started Application in 5.799 seconds (JVM running for 6.6)
+2019-48-08 16:48:50:204[http-nio-8081-exec-1]INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-48-08 16:48:50:204[http-nio-8081-exec-1]INFO  org.springframework.web.servlet.DispatcherServlet-FrameworkServlet 'dispatcherServlet': initialization started
+2019-48-08 16:48:50:230[http-nio-8081-exec-1]INFO  org.springframework.web.servlet.DispatcherServlet-FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2019-49-08 16:49:39:126[http-nio-8081-exec-2]INFO  com.alibaba.druid.pool.DruidDataSource-{dataSource-1} inited
+2019-49-08 16:49:39:270[http-nio-8081-exec-2]INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader-Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2019-51-08 16:51:00:453[restartedMain]INFO  com.sarnath.sshop.Application-Starting Application on PC201507241719 with PID 14740 (D:\Documents\GitHub\springboot\springboot-shop\target\classes started by Administrator in D:\Documents\GitHub\springboot)
+2019-51-08 16:51:00:455[restartedMain]INFO  com.sarnath.sshop.Application-No active profile set, falling back to default profiles: default
+2019-51-08 16:51:00:497[restartedMain]INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3adffde3: startup date [Mon Apr 08 16:51:00 CST 2019]; root of context hierarchy
+2019-51-08 16:51:01:459[restartedMain]INFO  o.s.d.r.config.RepositoryConfigurationDelegate-Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-51-08 16:51:01:708[restartedMain]INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor-JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-51-08 16:51:01:802[restartedMain]INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1fb64c8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-51-08 16:51:02:650[restartedMain]INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer-Tomcat initialized with port(s): 8081 (http)
+2019-51-08 16:51:02:667[restartedMain]INFO  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8081"]
+2019-51-08 16:51:02:682[restartedMain]INFO  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2019-51-08 16:51:02:682[restartedMain]INFO  org.apache.catalina.core.StandardEngine-Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-51-08 16:51:02:685[localhost-startStop-1]INFO  org.apache.catalina.core.AprLifecycleListener-The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Users\Administrator\Desktop\New folder (2)\apache-tomcat-6.0.16\lib;C:\Users\Administrator\Desktop\New folder (2)\apache-tomcat-6.0.16\bin;E:\SQLServer X86\100\Tools\Binn\;E:\SQL Server 2008\100\Tools\Binn\;E:\SQL Server 2008\100\DTS\Binn\;E:\SQLServer X86\100\Tools\Binn\VSShell\Common7\IDE\;E:\SQLServer X86\100\DTS\Binn\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;D:\Redis\;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;.]
+2019-51-08 16:51:02:773[localhost-startStop-1]INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+2019-51-08 16:51:02:773[localhost-startStop-1]INFO  org.springframework.web.context.ContextLoader-Root WebApplicationContext: initialization completed in 2276 ms
+2019-51-08 16:51:03:072[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-51-08 16:51:03:073[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'sessionRepositoryFilter' to: [/*]
+2019-51-08 16:51:03:073[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-51-08 16:51:03:073[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-51-08 16:51:03:073[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'requestContextFilter' to: [/*]
+2019-51-08 16:51:03:073[localhost-startStop-1]INFO  o.s.boot.web.servlet.ServletRegistrationBean-Servlet dispatcherServlet mapped to [/]
+2019-51-08 16:51:03:610[restartedMain]INFO  io.lettuce.core.EpollProvider-Starting without optional epoll library
+2019-51-08 16:51:03:611[restartedMain]INFO  io.lettuce.core.KqueueProvider-Starting without optional kqueue library
+2019-51-08 16:51:04:655[restartedMain]INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping-Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-51-08 16:51:04:906[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter-Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3adffde3: startup date [Mon Apr 08 16:51:00 CST 2019]; root of context hierarchy
+2019-51-08 16:51:04:954[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/product/getIndexProducts]}" onto public com.github.pagehelper.PageInfo<com.sarnath.sshop.entity.ProductEntity> com.sarnath.sshop.controller.ProductController.getallProducts()
+2019-51-08 16:51:04:957[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/admin/add],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<java.util.Map<java.lang.String, java.lang.Integer>> com.sarnath.sshop.controller.SysAdminController.add(com.sarnath.sshop.entity.form.MSysAdminForm)
+2019-51-08 16:51:04:959[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/user/register],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<java.util.Map<java.lang.String, java.lang.Integer>> com.sarnath.sshop.controller.UserController.register(com.sarnath.sshop.entity.form.UserForm,org.springframework.validation.BindingResult)
+2019-51-08 16:51:04:959[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/user/registCheck],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.sarnath.sshop.controller.UserController.checkName(java.lang.String)
+2019-51-08 16:51:04:960[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/user/session],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<java.util.Map<java.lang.String, java.lang.Integer>> com.sarnath.sshop.controller.UserController.session(javax.servlet.http.HttpServletRequest)
+2019-51-08 16:51:04:960[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/user/login],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<com.sarnath.sshop.entity.UserEntity> com.sarnath.sshop.controller.UserController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-51-08 16:51:04:962[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-51-08 16:51:04:962[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-51-08 16:51:04:992[restartedMain]INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping-Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-51-08 16:51:04:992[restartedMain]INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping-Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-51-08 16:51:05:005[restartedMain]INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Detected @ExceptionHandler methods in exceptionController
+2019-51-08 16:51:05:475[restartedMain]INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer-LiveReload server is running on port 35729
+2019-51-08 16:51:05:505[restartedMain]INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter-Registering beans for JMX exposure on startup
+2019-51-08 16:51:05:506[restartedMain]INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter-Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-51-08 16:51:05:512[restartedMain]INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter-Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-51-08 16:51:05:517[restartedMain]INFO  o.s.context.support.DefaultLifecycleProcessor-Starting beans in phase 2147483647
+2019-51-08 16:51:05:583[restartedMain]INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor-No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-51-08 16:51:05:594[restartedMain]INFO  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8081"]
+2019-51-08 16:51:05:596[restartedMain]INFO  org.apache.tomcat.util.net.NioSelectorPool-Using a shared selector for servlet write/read
+2019-51-08 16:51:05:611[restartedMain]INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer-Tomcat started on port(s): 8081 (http) with context path ''
+2019-51-08 16:51:05:615[restartedMain]INFO  com.sarnath.sshop.Application-Started Application in 5.472 seconds (JVM running for 6.195)
+2019-53-08 16:53:37:419[http-nio-8081-exec-1]INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-53-08 16:53:37:419[http-nio-8081-exec-1]INFO  org.springframework.web.servlet.DispatcherServlet-FrameworkServlet 'dispatcherServlet': initialization started
+2019-53-08 16:53:37:440[http-nio-8081-exec-1]INFO  org.springframework.web.servlet.DispatcherServlet-FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2019-54-08 16:54:32:434[http-nio-8081-exec-4]INFO  com.alibaba.druid.pool.DruidDataSource-{dataSource-1} inited
+2019-54-08 16:54:32:583[http-nio-8081-exec-4]INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader-Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2019-55-08 16:55:19:418[restartedMain]INFO  com.sarnath.sshop.Application-Starting Application on PC201507241719 with PID 13784 (D:\Documents\GitHub\springboot\springboot-shop\target\classes started by Administrator in D:\Documents\GitHub\springboot)
+2019-55-08 16:55:19:421[restartedMain]INFO  com.sarnath.sshop.Application-No active profile set, falling back to default profiles: default
+2019-55-08 16:55:19:467[restartedMain]INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext-Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@418ce738: startup date [Mon Apr 08 16:55:19 CST 2019]; root of context hierarchy
+2019-55-08 16:55:20:361[restartedMain]INFO  o.s.d.r.config.RepositoryConfigurationDelegate-Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-55-08 16:55:20:621[restartedMain]INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor-JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-55-08 16:55:20:718[restartedMain]INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$36194648] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-55-08 16:55:21:471[restartedMain]INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer-Tomcat initialized with port(s): 8081 (http)
+2019-55-08 16:55:21:481[restartedMain]INFO  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8081"]
+2019-55-08 16:55:21:489[restartedMain]INFO  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2019-55-08 16:55:21:489[restartedMain]INFO  org.apache.catalina.core.StandardEngine-Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-55-08 16:55:21:492[localhost-startStop-1]INFO  org.apache.catalina.core.AprLifecycleListener-The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\Java\jdk1.8.0_144\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Users\Administrator\Desktop\New folder (2)\apache-tomcat-6.0.16\lib;C:\Users\Administrator\Desktop\New folder (2)\apache-tomcat-6.0.16\bin;E:\SQLServer X86\100\Tools\Binn\;E:\SQL Server 2008\100\Tools\Binn\;E:\SQL Server 2008\100\DTS\Binn\;E:\SQLServer X86\100\Tools\Binn\VSShell\Common7\IDE\;E:\SQLServer X86\100\DTS\Binn\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;D:\Redis\;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;.]
+2019-55-08 16:55:21:578[localhost-startStop-1]INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+2019-55-08 16:55:21:578[localhost-startStop-1]INFO  org.springframework.web.context.ContextLoader-Root WebApplicationContext: initialization completed in 2111 ms
+2019-55-08 16:55:21:861[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-55-08 16:55:21:862[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'sessionRepositoryFilter' to: [/*]
+2019-55-08 16:55:21:862[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-55-08 16:55:21:862[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-55-08 16:55:21:862[localhost-startStop-1]INFO  o.s.boot.web.servlet.FilterRegistrationBean-Mapping filter: 'requestContextFilter' to: [/*]
+2019-55-08 16:55:21:862[localhost-startStop-1]INFO  o.s.boot.web.servlet.ServletRegistrationBean-Servlet dispatcherServlet mapped to [/]
+2019-55-08 16:55:22:314[restartedMain]INFO  io.lettuce.core.EpollProvider-Starting without optional epoll library
+2019-55-08 16:55:22:315[restartedMain]INFO  io.lettuce.core.KqueueProvider-Starting without optional kqueue library
+2019-55-08 16:55:23:204[restartedMain]INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping-Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-55-08 16:55:23:386[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter-Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@418ce738: startup date [Mon Apr 08 16:55:19 CST 2019]; root of context hierarchy
+2019-55-08 16:55:23:436[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/product/getIndexProducts]}" onto public com.github.pagehelper.PageInfo<com.sarnath.sshop.entity.ProductEntity> com.sarnath.sshop.controller.ProductController.getallProducts()
+2019-55-08 16:55:23:439[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/admin/add],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<java.util.Map<java.lang.String, java.lang.Integer>> com.sarnath.sshop.controller.SysAdminController.add(com.sarnath.sshop.entity.form.MSysAdminForm)
+2019-55-08 16:55:23:441[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/user/register],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<java.util.Map<java.lang.String, java.lang.Integer>> com.sarnath.sshop.controller.UserController.register(com.sarnath.sshop.entity.form.UserForm,org.springframework.validation.BindingResult)
+2019-55-08 16:55:23:441[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/user/registCheck],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<java.util.Map<java.lang.String, java.lang.String>> com.sarnath.sshop.controller.UserController.checkName(java.lang.String)
+2019-55-08 16:55:23:442[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/user/session],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<java.util.Map<java.lang.String, java.lang.Integer>> com.sarnath.sshop.controller.UserController.session(javax.servlet.http.HttpServletRequest)
+2019-55-08 16:55:23:442[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/user/login],methods=[POST]}" onto public com.sarnath.sshop.entity.vo.ResultVO<com.sarnath.sshop.entity.UserEntity> com.sarnath.sshop.controller.UserController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-55-08 16:55:23:447[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-55-08 16:55:23:447[restartedMain]INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping-Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-55-08 16:55:23:475[restartedMain]INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping-Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-55-08 16:55:23:476[restartedMain]INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping-Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-55-08 16:55:23:490[restartedMain]INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver-Detected @ExceptionHandler methods in exceptionController
+2019-55-08 16:55:23:881[restartedMain]INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer-LiveReload server is running on port 35729
+2019-55-08 16:55:23:907[restartedMain]INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter-Registering beans for JMX exposure on startup
+2019-55-08 16:55:23:908[restartedMain]INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter-Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-55-08 16:55:23:913[restartedMain]INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter-Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-55-08 16:55:23:917[restartedMain]INFO  o.s.context.support.DefaultLifecycleProcessor-Starting beans in phase 2147483647
+2019-55-08 16:55:23:962[restartedMain]INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor-No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-55-08 16:55:23:967[restartedMain]INFO  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8081"]
+2019-55-08 16:55:23:969[restartedMain]INFO  org.apache.tomcat.util.net.NioSelectorPool-Using a shared selector for servlet write/read
+2019-55-08 16:55:23:982[restartedMain]INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer-Tomcat started on port(s): 8081 (http) with context path ''
+2019-55-08 16:55:23:985[restartedMain]INFO  com.sarnath.sshop.Application-Started Application in 4.972 seconds (JVM running for 5.846)
+2019-55-08 16:55:29:067[http-nio-8081-exec-2]INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-55-08 16:55:29:067[http-nio-8081-exec-2]INFO  org.springframework.web.servlet.DispatcherServlet-FrameworkServlet 'dispatcherServlet': initialization started
+2019-55-08 16:55:29:089[http-nio-8081-exec-2]INFO  org.springframework.web.servlet.DispatcherServlet-FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2019-55-08 16:55:29:156[http-nio-8081-exec-2]INFO  com.alibaba.druid.pool.DruidDataSource-{dataSource-1} inited
