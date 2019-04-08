@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.sarnath.sshop.entity.ReciveAddressEntity;
 
-public interface ReciveAddressEntityMapper {
+public interface ReciveAddressMapper {
 	
 	ReciveAddressEntity getReciveAddressListById(int reciveAddressId);
 
