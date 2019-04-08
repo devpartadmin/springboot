@@ -35,6 +35,7 @@ import com.sarnath.sshop.service.ProductService;
 import com.sarnath.sshop.utils.ResultVOUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -50,11 +51,16 @@ public class ProductController {
     @Autowired
     private ProductService service;
 
-    @RequestMapping("getIndexProducts")
+    @GetMapping("getIndexProducts")
     public PageInfo<ProductEntity> getallProducts(){
         PageHelper.startPage(1,5);
         ArrayList<ProductEntity> allProducts = service.getAllProducts();
         PageInfo<ProductEntity> page=new PageInfo<>(allProducts);
         return page;
+    }
+    @GetMapping("getProductById")
+    public ResultVO getProductById(Integer id){
+        ResultVO vo=service.getProductById(id);
+        return vo;
     }
 }

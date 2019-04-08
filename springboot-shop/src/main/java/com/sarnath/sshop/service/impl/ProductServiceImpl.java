@@ -28,8 +28,12 @@ package com.sarnath.sshop.service.impl;/**
  */
 
 import com.sarnath.sshop.entity.ProductEntity;
+import com.sarnath.sshop.entity.vo.ResultVO;
+import com.sarnath.sshop.enums.ResultEnum;
+import com.sarnath.sshop.exception.SellException;
 import com.sarnath.sshop.mapper.ProductMapper;
 import com.sarnath.sshop.service.ProductService;
+import com.sarnath.sshop.utils.ResultVOUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,5 +50,16 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ArrayList<ProductEntity> getAllProducts() {
         return mapper.getAllProducts();
+    }
+
+    @Override
+    public ResultVO getProductById(Integer id) {
+        if (id !=null){
+            ProductEntity p=mapper.getProductById(id);
+            return ResultVOUtil.success(p);
+        }
+        else {
+            throw new SellException(ResultEnum.WRONG_ATTRIBUTE);
+        }
     }
 }

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sarnath.sshop.mapper.SysAdminMapper">
-    <insert id="insert" useGeneratedKeys="true" keyColumn="sysAdminID" keyProperty="sysAdminID" parameterType="MSysAdmin">
+    <insert id="insert" useGeneratedKeys="true" keyColumn="sysAdminID" keyProperty="sysAdminID" parameterType="MSysAdminEntity">
       INSERT INTO `sshop`.`M_SYS_ADMIN` (`SysAdminAccNo`, `SysAdminName`, `Mobile`, `Email`, `Status`, `Remarks`, `Password`, `FaceImage`, `CreateTime`, `CreateUser`, `UpdateTime`, `UpdateUser`, `Valid`, `Version`) VALUES (#{sysAdminAccNo}, #{sysAdminName}, #{mobile}, #{email}, #{status}, #{remarks}, #{password}, #{faceImage},  #{createTime}, #{createUser}, #{updateTime}, #{updateUser}, #{valid}, #{version})
         <selectKey resultType="int" keyProperty="sysAdminID" order="AFTER">
             SELECT LAST_INSERT_ID()
