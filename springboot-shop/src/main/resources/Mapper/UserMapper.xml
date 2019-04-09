@@ -9,7 +9,7 @@
         </selectKey>
     </insert>
     <select id="findUserByName" resultType="com.sarnath.sshop.entity.UserEntity">
-        SELECT * FROM user_table WHERE user_name = #{userName}
+        SELECT * FROM user_info WHERE user_name = #{userName}
     </select>
     <select id="findIdByName" resultType="Integer">
         SELECT user_id FROM user_info WHERE user_name = #{userName}
