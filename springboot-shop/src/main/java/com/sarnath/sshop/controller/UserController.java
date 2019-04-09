@@ -48,6 +48,7 @@ public class UserController {
         if (!StringUtils.isEmpty(userName) && !StringUtils.isEmpty(userPassword)){
             if (userService.login(userName, userPassword)) {
                 String string = UUID.randomUUID().toString();
+                request.getSession().setAttribute("token",string);
                 Cookie cookie=new Cookie("token",string);
                 cookie.setPath("/");
                 cookie.setHttpOnly(false);
