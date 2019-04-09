@@ -18,15 +18,13 @@ public class UserEntity {
     private Date lastLoginTime;
     private String userImg;
     @JsonIgnore
-    private String userCreater;
+    private String createUser;
     @JsonIgnore
     private Date createTime;
     @JsonIgnore
-    private String userUpdater;
+    private String updateUser;
     @JsonIgnore
     private Date updateTime;
-    @JsonIgnore
-    private Integer userIsDelete;
     @JsonIgnore
     private String userPassword;
 

@@ -14,8 +14,8 @@ public class UserForm2Entity {
         UserEntity user = new UserEntity();
 //        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         BeanUtils.copyProperties(userForm, user);
-        user.setUserCreater(userForm.getUserName());
-        user.setUserUpdater(userForm.getUserName());
+        user.setCreateUser(userForm.getUserName());
+        user.setUpdateUser(userForm.getUserName());
         user.setCreateTime(new Date());
         user.setUpdateTime(new Date());
         return user;
