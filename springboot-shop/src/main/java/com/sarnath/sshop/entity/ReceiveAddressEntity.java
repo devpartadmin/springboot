@@ -2,7 +2,7 @@ package com.sarnath.sshop.entity;
 
 import com.sarnath.sshop.enums.ValidEnum;
 
-public class ReciveAddressEntity {
+public class ReceiveAddressEntity {
 
 	// 收货地址Id
 	private Long addressId;

@@ -1,4 +1,4 @@
-package com.sarnath.sshop.controller;/**
+package com.sarnath.sshop.utils;/**
 *                                                                      : ,       
 *                                  +7?==?O$~                           :7?,, :~=,
 *                                +Z~       +Z~,                        :I+IIO+++ 
@@ -27,44 +27,16 @@ package com.sarnath.sshop.controller;/**
 *                     哪错了？             错哪了？              我是谁？
 */
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
-import com.sarnath.sshop.entity.ProductEntity;
-import com.sarnath.sshop.entity.vo.ResultVO;
-import com.sarnath.sshop.enums.ResultEnum;
-import com.sarnath.sshop.exception.SellException;
-import com.sarnath.sshop.service.ProductService;
-import com.sarnath.sshop.utils.ResultVOUtil;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /** @Author ShaneLau
- * Created by Shane Lau on 2019/4/4.
+ * Created by Shane Lau on 2019/4/9.
  */
-@RestController
-@RequestMapping("/product")
-@CrossOrigin
-public class ProductController {
-    @Autowired
-    private ProductService service;
-
-    @GetMapping("getIndexProducts")
-    public PageInfo<ProductEntity> getallProducts(){
-        PageHelper.startPage(1,5);
-        ArrayList<ProductEntity> allProducts = service.getAllProducts();
-        PageInfo<ProductEntity> page=new PageInfo<>(allProducts);
-        return page;
+public class TimeUtil {
+    public static String getCurrentTime(){
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddHHmmss");
+        String format = sdf.format(new Date());
+        return format;
     }
-    @GetMapping("getProductById")
-    public ResultVO getProductById(Integer id){
-        if (id==null){
-            throw new SellException(ResultEnum.WRONG_ATTRIBUTE);
-        }
-        ResultVO productById = service.getProductById(id);
-        return productById;
-    }
-
 }

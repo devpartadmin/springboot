@@ -2,10 +2,10 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.sarnath.sshop.mapper.ReciveAddressMapper">
+<mapper namespace="com.sarnath.sshop.mapper.ReceiveAddressMapper">
 
-	<resultMap id="ReciveAddressEntity"
-		type="com.sarnath.sshop.entity.ReciveAddressEntity">
+	<resultMap id="ReceiveAddressEntity"
+		type="com.sarnath.sshop.entity.ReceiveAddressEntity">
 		<id column="address_id" property="addressId" />
 		<result column="province_name" property="province" />
 		<result column="city_name" property="city" />
@@ -22,8 +22,8 @@
 			typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler"
 			javaType="com.sarnath.sshop.enums.ValidEnum" />
 	</resultMap>
-	<select id="getReciveAddressListById" parameterType="int"
-		resultMap="ReciveAddressEntity">
+	<select id="getReceiveAddressListByAddressId" parameterType="int"
+		resultMap="ReceiveAddressEntity">
 		select
 		address_id,province_name,city_name,area_name,address_detail,address_info.area_id,address_person,address_phone,createtime,createUser,updatetime,updateuser,valid
 		from address_info left join dcc_areas on
@@ -32,5 +32,14 @@
 		dcc_cities.province_id=dcc_provinces.province_id where
 		address_id=#{addressId}
 	</select>
-
+	<select id="getAddressByUserId" parameterType="int"
+			resultMap="ReceiveAddressEntity">
+		select
+		address_id,province_name,city_name,area_name,address_detail,address_info.area_id,address_person,address_phone,createtime,createUser,updatetime,updateuser,valid
+		from (address_info left join dcc_areas on
+		address_info.area_id=dcc_areas.area_id left join dcc_cities on
+		dcc_areas.city_id=dcc_cities.city_id left join dcc_provinces on
+		dcc_cities.province_id=dcc_provinces.province_id ) a LEFT JOIN address_user b ON a.address_id=b.address_id
+		where b.user_id=#{userId} AND b.Valid =0
+	</select>
 </mapper>

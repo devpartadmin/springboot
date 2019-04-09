@@ -38,7 +38,9 @@ public enum ResultEnum {
 
     WRONG_ATTRIBUTE(27,"参数错误"),
 
-    LOGIN_PLEASE(28,"请先登录")
+    LOGIN_PLEASE(28,"请先登录"),
+
+    DATABASE_ERROR(29,"数据库错误")
     ;
 
     private Integer code;

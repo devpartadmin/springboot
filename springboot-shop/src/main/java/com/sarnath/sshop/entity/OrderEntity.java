@@ -20,7 +20,7 @@ public class OrderEntity {
 	//商品列表
 	private List<OrderProduct> productEntities;
 	//收货地址
-	private ReciveAddressEntity reciveAddress;
+	private ReceiveAddressEntity reciveAddress;
 	//用户
 	private UserEntity user;
 	// 创建时间
@@ -121,14 +121,14 @@ public class OrderEntity {
 	/**
 	 * @return the reciveAddress
 	 */
-	public ReciveAddressEntity getReciveAddress() {
+	public ReceiveAddressEntity getReciveAddress() {
 		return reciveAddress;
 	}
 
 	/**
 	 * @param reciveAddress the reciveAddress to set
 	 */
-	public void setReciveAddress(ReciveAddressEntity reciveAddress) {
+	public void setReciveAddress(ReceiveAddressEntity reciveAddress) {
 		this.reciveAddress = reciveAddress;
 	}
 
