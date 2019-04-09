@@ -9,8 +9,5 @@
         <module name="springboot-shop" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="springboot-shop" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
