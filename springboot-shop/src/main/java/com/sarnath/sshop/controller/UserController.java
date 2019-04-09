@@ -43,8 +43,10 @@ public class UserController {
     public ResultVO<Map<String, String>> login(String userName, String userPassword, HttpServletRequest request, HttpServletResponse response) {
         Map<String, String> map = new HashMap<>();
         if (!StringUtils.isEmpty(userName) && !StringUtils.isEmpty(userPassword)){
-            if (userService.login(userName, userPassword)) {
+            UserEntity user = userService.login(userName, userPassword);
+            if (user != null) {
                 String string = UUID.randomUUID().toString();
+                request.getSession().setAttribute("user", user);
                 request.getSession().setAttribute("token",string);
                 Cookie cookie=new Cookie("token",string);
                 cookie.setPath("/");

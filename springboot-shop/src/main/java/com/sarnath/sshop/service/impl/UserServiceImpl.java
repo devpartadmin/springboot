@@ -21,15 +21,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Boolean login(String userName, String userPassword) {
+    public UserEntity login(String userName, String userPassword) {
         if (userName == null || userPassword == null) {
-            return false;
+            return null;
         }
         UserEntity user = userMapper.findUserByName(userName);
         if (user == null || !user.getUserPassword().equals(userPassword)) {
-            return false;
+            return null;
         }
-        return true;
+        return user;
     }
 
     @Override
