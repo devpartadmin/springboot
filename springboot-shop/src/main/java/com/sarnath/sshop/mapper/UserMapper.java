@@ -9,6 +9,7 @@ public interface UserMapper {
 
     //查询用户
     UserEntity findUserByName(String userName);
+    UserEntity findUserById(String userId);
 
     //查询用户ID
     Integer findIdByName(String userName);

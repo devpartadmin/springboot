@@ -5,6 +5,7 @@ import com.sarnath.sshop.enums.ResultEnum;
 import com.sarnath.sshop.exception.SellException;
 import com.sarnath.sshop.mapper.UserMapper;
 import com.sarnath.sshop.service.UserService;
+import com.sarnath.sshop.utils.ResultVOUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean login(String userName, String userPassword) {
+        if (userName == null || userPassword == null) {
+            return false;
+        }
         UserEntity user = userMapper.findUserByName(userName);
         if (user == null || !user.getUserPassword().equals(userPassword)) {
             return false;
@@ -30,6 +34,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean checkName(String userName) {
+        if (userName == null) {
+            return false;
+        }
         Integer userId = userMapper.findIdByName(userName);
         if (userId == null) {
             return true;

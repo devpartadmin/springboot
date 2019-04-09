@@ -41,9 +41,6 @@ public class UserController {
 
     @PostMapping("/login")
     public ResultVO<Map<String, String>> login(String userName, String userPassword, HttpServletRequest request, HttpServletResponse response) {
-        if (userName == null || userPassword == null) {
-            return ResultVOUtil.error(1003, "用户名密码不能为空！");
-        }
         Map<String, String> map = new HashMap<>();
         if (!StringUtils.isEmpty(userName) && !StringUtils.isEmpty(userPassword)){
             if (userService.login(userName, userPassword)) {
@@ -62,26 +59,13 @@ public class UserController {
 
     @PostMapping("/registCheck")
     public ResultVO<Map<String, String>> checkName(String userName) {
-        if (userName == null) {
-            return ResultVOUtil.error(2003, "请输入用户名");
-        }
+
         Map<String, String> map = new HashMap<>();
         if (userService.checkName(userName)) {
             map.put("userName", userName);
             return ResultVOUtil.success(map);
         }
-        return ResultVOUtil.error(2002, "用户名已存在");
-    }
-
-    @PostMapping("/session")
-    public ResultVO<Map<String, Integer>> session(HttpServletRequest request) {
-        Integer userId = (Integer) request.getSession().getAttribute("sessionid");
-        if (userId == null) {
-            return ResultVOUtil.error(2006, "请登录");
-        }
-        Map<String, Integer> map = new HashMap<String, Integer>();
-        map.put("sessionid", userId);
-        return ResultVOUtil.success(map);
+        return ResultVOUtil.error(2002, "用户名不可用");
     }
 
 }

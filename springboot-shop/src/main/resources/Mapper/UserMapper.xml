@@ -3,13 +3,16 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sarnath.sshop.mapper.UserMapper">
     <insert id="insert">
-        INSERT INTO `sshop`.`user_info` (`user_name`, `user_email`, `user_sex`, `user_phone`, `last_login_time`, `user_img`, `user_creater`, `create_time`, `user_updater`, `update_time`, `user_is_delete`, `user_password`) VALUES (#{userName}, #{userEmail}, #{userSex}, #{userPhone}, #{lastLoginTime}, #{userImg}, #{userCreater}, #{createTime}, #{userUpdater}, #{updateTime}, #{userIsDelete}, #{userPassword});
+        INSERT INTO `sshop`.`user_info` (`user_name`, `user_email`, `user_sex`, `user_phone`, `last_login_time`, `user_img`, `create_user`, `create_time`, `update_user`, `update_time`, `user_password`) VALUES (#{userName}, #{userEmail}, #{userSex}, #{userPhone}, #{lastLoginTime}, #{userImg}, #{userCreater}, #{createTime}, #{userUpdater}, #{updateTime}, #{userIsDelete}, #{userPassword});
         <selectKey resultType="Integer" keyProperty="userId" order="AFTER">
             SELECT LAST_INSERT_ID()
         </selectKey>
     </insert>
     <select id="findUserByName" resultType="com.sarnath.sshop.entity.UserEntity">
-        SELECT * FROM user_info WHERE user_name = #{userName}
+        SELECT `user_id`, `user_name`, `user_email`, `user_sex`, `user_phone`, `last_login_time`, `user_img`, `create_user`, `create_time`, `update_user`, `update_time`, `user_password` FROM sshop.user_info WHERE user_name = #{userName}
+    </select>
+    <select id="findUserById" resultType="com.sarnath.sshop.entity.UserEntity">
+        SELECT `user_id`, `user_name`, `user_email`, `user_sex`, `user_phone`, `last_login_time`, `user_img`, `create_user`, `create_time`, `update_user`, `update_time`, `user_password` FROM sshop.user_info WHERE user_name = #{userId}
     </select>
     <select id="findIdByName" resultType="Integer">
         SELECT user_id FROM user_info WHERE user_name = #{userName}

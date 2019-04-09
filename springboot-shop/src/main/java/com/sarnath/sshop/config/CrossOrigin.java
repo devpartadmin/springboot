@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class CrossOrigin {
     @Bean
-    public WebMvcConfigurer corsConfigurer() {
+    public WebMvcConfigurer crossConfigurer() {
         return new WebMvcConfigurer() {
             @Override
             //重写父类提供的跨域请求处理的接口
