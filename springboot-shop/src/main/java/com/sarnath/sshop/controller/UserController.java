@@ -11,10 +11,13 @@ import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 @CrossOrigin
 @RestController
@@ -37,14 +40,18 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResultVO<Map<String, String>> login(String userName, String userPassword, HttpServletRequest request) {
+    public ResultVO<Map<String, String>> login(String userName, String userPassword, HttpServletRequest request, HttpServletResponse response) {
         if (userName == null || userPassword == null) {
             return ResultVOUtil.error(1003, "用户名密码不能为空！");
         }
         Map<String, String> map = new HashMap<>();
         if (!StringUtils.isEmpty(userName) && !StringUtils.isEmpty(userPassword)){
             if (userService.login(userName, userPassword)) {
-                request.getSession().setAttribute("sessionid", userService.getUserId(userName));
+                String string = UUID.randomUUID().toString();
+                Cookie cookie=new Cookie("token",string);
+                cookie.setPath("/");
+                cookie.setHttpOnly(false);
+                response.addCookie(cookie);
                 map.put("userName", userName);
                 return ResultVOUtil.success(map);
             }

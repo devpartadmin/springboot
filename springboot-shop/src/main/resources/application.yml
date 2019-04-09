@@ -1,6 +1,10 @@
 server:
   url: '192.168.8.236'
   port: 8081
+  servlet:
+    session:
+      cookie:
+        http-only: false
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
