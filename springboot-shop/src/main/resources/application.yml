@@ -48,7 +48,7 @@ spring:
         # 上传文件总的最大值
         max-request-size: 100MB
   redis:
-    host: 192.168.9.40
+    host: 192.168.9.37
     port: 6379
 mybatis:
   mapper-locations: classpath:Mapper/**/*.xml

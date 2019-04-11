@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sarnath.sshop.mapper.OrderProductMapper">
+
+    <resultMap id="productOrder" type="com.sarnath.sshop.entity.OrderProductEntity">
+        <id column="order_id" property="orderId"></id>
+        <result column="order_num" property="buyNum"></result>
+        <collection property="productEntity" column="product_id"
+                     select="com.sarnath.sshop.mapper.ProductMapper.getProductById"></collection>
+    </resultMap>
+    <select id="getOrderProductByOrderId" resultMap="productOrder">
+        select order_id,order_num,product_id
+        from order_product
+        where order_id = #{orderId}
+    </select>
+</mapper>

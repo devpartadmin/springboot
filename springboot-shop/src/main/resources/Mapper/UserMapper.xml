@@ -2,6 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sarnath.sshop.mapper.UserMapper">
+    <resultMap id="user" type="com.sarnath.sshop.entity.UserEntity">
+        <id column="user_id" property="userId"></id>
+        <result column="user_name" property="userName"></result>
+        <result column="user_email" property="userEmail"></result>
+        <result column="user_sex" property="userSex"></result>
+        <result column="user_phone" property="userPhone"></result>
+        <result column="user_img" property="userImg"></result>
+        <result column="last_login_time" property="lastLoginTime"/>
+        <result column="user_password" property="userPassword"/>
+        <result column="createtime" property="createTime"/>
+    </resultMap>
     <insert id="insert">
         INSERT INTO `sshop`.`user_info` (`user_name`, `user_email`, `user_sex`, `user_phone`, `last_login_time`, `user_img`, `create_user`, `create_time`, `update_user`, `update_time`, `user_password`) VALUES (#{userName}, #{userEmail}, #{userSex}, #{userPhone}, #{lastLoginTime}, #{userImg}, #{userCreater}, #{createTime}, #{userUpdater}, #{updateTime}, #{userIsDelete}, #{userPassword});
         <selectKey resultType="Integer" keyProperty="userId" order="AFTER">
@@ -12,7 +23,7 @@
         SELECT `user_id`, `user_name`, `user_email`, `user_sex`, `user_phone`, `last_login_time`, `user_img`, `create_user`, `create_time`, `update_user`, `update_time`, `user_password` FROM sshop.user_info WHERE user_name = #{userName}
     </select>
     <select id="findUserById" resultType="com.sarnath.sshop.entity.UserEntity">
-        SELECT `user_id`, `user_name`, `user_email`, `user_sex`, `user_phone`, `last_login_time`, `user_img`, `create_user`, `create_time`, `update_user`, `update_time`, `user_password` FROM sshop.user_info WHERE user_name = #{userId}
+        SELECT `user_id`, `user_name`, `user_email`, `user_sex`, `user_phone`, `last_login_time`, `user_img`, `create_user`, `create_time`, `update_user`, `update_time`, `user_password` FROM sshop.user_info WHERE user_id = #{userId}
     </select>
     <select id="findIdByName" resultType="Integer">
         SELECT user_id FROM user_info WHERE user_name = #{userName}

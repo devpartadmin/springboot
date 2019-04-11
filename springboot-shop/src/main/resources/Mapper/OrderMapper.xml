@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sarnath.sshop.mapper.OrderMapper">
+    <resultMap type="com.sarnath.sshop.entity.OrderEntity"
+               id="order">
+        <id column="order_id" property="orderId"/>
+        <result column="order_identifier" property="orderIdentifier"/>
+        <result column="order_datetime" property="orderDatetime"/>
+        <result column="order_money" property="orderMoney"/>
+        <result column="order_sendtime" property="orderSendTime"/>
+        <result column="order_trachingnum" property="orderTrackingNum"/>
+        <result column="order_receipttime" property="orderReceiptTime"/>
+        <result column="createtime" property="createTime"/>
+        <result column="createuser" property="createUser"/>
+        <result column="updatetime" property="updateTime"/>
+        <result column="updateuser" property="updateUser"/>
+        <result column="valid" property="validEnum"
+                typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler"
+                javaType="com.sarnath.sshop.enums.ValidEnum"/>
+        <association property="user" column="user_id"
+                     select="com.sarnath.sshop.mapper.UserMapper.findUserById"></association>
+        <association property="orderProductEntities" column="order_id"
+                     select="com.sarnath.sshop.mapper.OrderProductMapper.getOrderProductByOrderId"></association>
+    </resultMap>
+    <select id="getOrderById" resultMap="order" resultType="com.sarnath.sshop.entity.OrderEntity">
+        SELECT user_id,
+               order_info.order_id,
+               order_identifier,
+               order_datetime,
+               order_money,
+               order_trackingnum,
+               order_sendtime,
+               order_receipttime,
+               order_info.valid,
+               order_info.createtime,
+               order_info.createuser,
+               order_info.updatetime,
+               order_info.updateuser
+        FROM order_info
+                 LEFT JOIN order_user ON
+                order_info.order_id = order_user.order_id
+        WHERE order_info.order_id = #{orderId}
+    </select>
+
+</mapper>
